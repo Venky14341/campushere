@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { GitBranch, Globe, Sparkles } from "lucide-react";
 import toast from "react-hot-toast";
-import api from "../api/axios";
+import axios from "axios";
 
 function AuthPage({ mode = "login" }) {
   const navigate = useNavigate();
@@ -29,12 +29,12 @@ function AuthPage({ mode = "login" }) {
     setLoading(true);
     try {
       if (isLogin) {
-        await api.post("/auth/login", { username, password });
+        await axios.post(`${import.meta.env.VITE_API_URL}/auth/login`, { username, password });
         localStorage.setItem("isLoggedIn", "true");
         toast.success("Logged in");
         navigate("/app");
       } else {
-        await api.post("/auth/register", { username, password });
+        await axios.post(`${import.meta.env.VITE_API_URL}/auth/register`, { username, password });
         toast.success("Registration successful");
         navigate("/");
       }
