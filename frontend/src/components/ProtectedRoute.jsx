@@ -5,15 +5,8 @@ import {
 function ProtectedRoute({
   children
 }) {
-
-  const isLoggedIn =
-    localStorage.getItem(
-      "isLoggedIn"
-    );
-
-  return isLoggedIn
-    ? children
-    : <Navigate to="/" />;
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+  return isLoggedIn ? children : <Navigate to="/" replace />;
 }
 
 export default ProtectedRoute;

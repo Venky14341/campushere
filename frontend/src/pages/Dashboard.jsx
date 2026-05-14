@@ -88,7 +88,7 @@ function Dashboard() {
 
       const response =
         await api.get(
-          `${import.meta.env.VITE_API_URL}/students`
+          "/students"
         );
 
       setStudents(response.data);
@@ -125,7 +125,7 @@ function Dashboard() {
       if (editingId) {
 
         await api.put(
-          `${import.meta.env.VITE_API_URL}/students/${editingId}`,
+          `/students/${editingId}`,
           {
             name,
             email,
@@ -142,7 +142,7 @@ function Dashboard() {
       } else {
 
         await api.post(
-          `${import.meta.env.VITE_API_URL}/students`,
+          "/students",
           {
             name,
             email,
@@ -182,7 +182,7 @@ function Dashboard() {
       try {
 
         await api.delete(
-          `${import.meta.env.VITE_API_URL}/students/${id}`
+          `/students/${id}`
         );
 
         toast.success(

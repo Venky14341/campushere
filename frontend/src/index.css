@@ -1,1 +1,113 @@
 @import "tailwindcss";
+
+:root {
+  --bg: #f4f7fb;
+  --bg-elev: #ffffff;
+  --bg-soft: #edf2ff;
+  --text: #0f172a;
+  --text-soft: #475569;
+  --border: rgba(15, 23, 42, 0.1);
+  --card-shadow: 0 20px 45px -28px rgba(15, 23, 42, 0.35);
+  --glass: rgba(255, 255, 255, 0.6);
+  --primary-from: #2563eb;
+  --primary-to: #4f46e5;
+  --accent: #06b6d4;
+}
+
+.dark {
+  --bg: #0b1020;
+  --bg-elev: #11182d;
+  --bg-soft: #18203a;
+  --text: #e5e7eb;
+  --text-soft: #94a3b8;
+  --border: rgba(148, 163, 184, 0.25);
+  --card-shadow: 0 20px 45px -28px rgba(2, 6, 23, 0.75);
+  --glass: rgba(17, 24, 45, 0.64);
+  --primary-from: #3b82f6;
+  --primary-to: #6366f1;
+  --accent: #22d3ee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at 10% -10%, rgba(59, 130, 246, 0.26), transparent 38%),
+    radial-gradient(circle at 100% 0%, rgba(34, 211, 238, 0.2), transparent 32%),
+    radial-gradient(circle at 50% 120%, rgba(99, 102, 241, 0.16), transparent 38%),
+    linear-gradient(160deg, rgba(15, 23, 42, 0.02), rgba(59, 130, 246, 0.04)),
+    var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: radial-gradient(circle at center, black 38%, transparent 82%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  width: 420px;
+  height: 420px;
+  right: -120px;
+  top: -90px;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.3), rgba(99, 102, 241, 0.02) 68%);
+  filter: blur(8px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.surface {
+  background: color-mix(in srgb, var(--bg-elev) 88%, transparent);
+  border: 1px solid var(--border);
+  box-shadow: var(--card-shadow);
+  backdrop-filter: blur(10px);
+}
+
+.glass {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(16px);
+}
+
+.gradient-btn {
+  background: linear-gradient(120deg, var(--primary-from), var(--primary-to));
+  box-shadow: 0 14px 28px -18px color-mix(in srgb, var(--primary-from) 70%, transparent);
+}
+
+.text-soft {
+  color: var(--text-soft);
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.4);
+  border-radius: 999px;
+}

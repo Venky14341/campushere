@@ -1,0 +1,8 @@
+export const courseCatalog = [
+  { id: 1, title: "JEE Physics Mastery", educator: "Aman Sir", level: "Advanced", learners: "42K", duration: "86h", rating: 4.8, tag: "JEE", price: 2499, image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=1200&q=80" },
+  { id: 2, title: "NEET Biology Crash", educator: "Neha Ma'am", level: "Intermediate", learners: "31K", duration: "64h", rating: 4.7, tag: "NEET", price: 2199, image: "https://images.unsplash.com/photo-1530026405186-ed1f139313f8?auto=format&fit=crop&w=1200&q=80" },
+  { id: 3, title: "Foundation Maths 9-10", educator: "Rohit Sir", level: "Beginner", learners: "22K", duration: "48h", rating: 4.6, tag: "Foundation", price: 1499, image: "https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?auto=format&fit=crop&w=1200&q=80" },
+  { id: 4, title: "CUET English Strategy", educator: "Priya Ma'am", level: "Intermediate", learners: "19K", duration: "35h", rating: 4.5, tag: "CUET", price: 1299, image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80" },
+  { id: 5, title: "JEE Advanced Problem Lab", educator: "Karthik Sir", level: "Advanced", learners: "28K", duration: "72h", rating: 4.9, tag: "JEE", price: 2999, image: "https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=1200&q=80" },
+  { id: 6, title: "NEET Chemistry Drills", educator: "Ananya Ma'am", level: "Intermediate", learners: "25K", duration: "59h", rating: 4.7, tag: "NEET", price: 1999, image: "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=1200&q=80" }
+];
